@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "302060765717",
+    "project_id": "aoun-charity-platform",
+    "storage_bucket": "aoun-charity-platform.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302060765717:android:af39e6b6734029ca1bc41c",
+        "android_client_info": {
+          "package_name": "com.aoun.aoun"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6HfjN6vgxogNmc599kL0Ep2oGVDbj86A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

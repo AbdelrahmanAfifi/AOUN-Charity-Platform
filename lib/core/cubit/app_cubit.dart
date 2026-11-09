@@ -17,15 +17,15 @@ class AppState<T> {
 }
 
 abstract class AppCubit<T> extends Cubit<AppState<T>> {
-  AppCubit() : super(const AppState<T>());
+  AppCubit() : super(AppState<T>());
 
-  void emitLoading() => emit(const AppState<T>(status: AppStatus.loading));
+  void emitLoading() => emit(AppState<T>(status: AppStatus.loading));
 
   void emitSuccess(T data) => emit(
         AppState<T>(status: AppStatus.success, data: data),
       );
 
-  void emitEmpty() => emit(const AppState<T>(status: AppStatus.empty));
+  void emitEmpty() => emit(AppState<T>(status: AppStatus.empty));
 
   void emitFailure(Failure failure) => emit(
         AppState<T>(
