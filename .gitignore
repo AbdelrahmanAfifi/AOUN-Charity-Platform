@@ -6,6 +6,7 @@
 build/
 coverage/
 android/local.properties
+android/.kotlin/
 ios/Flutter/Generated.xcconfig
 ios/Flutter/flutter_export_environment.sh
 .idea/
