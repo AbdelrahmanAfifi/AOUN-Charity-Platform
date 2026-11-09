@@ -9,5 +9,15 @@ android/local.properties
 android/.kotlin/
 ios/Flutter/Generated.xcconfig
 ios/Flutter/flutter_export_environment.sh
+mobile_app/android/local.properties
+mobile_app/android/.kotlin/
+mobile_app/ios/Flutter/Generated.xcconfig
+mobile_app/ios/Flutter/flutter_export_environment.sh
 .idea/
 .vscode/
+aoun.iml
+*.iml
+hs_err_pid*.log
+firebase-debug.log
+firestore-debug.log
+.DS_Store

@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // The app collections are not implemented yet. Keep access closed by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,30 +1,32 @@
-# AOUN
+# AOUN Charity Platform
 
-AOUN is a Flutter app for in-kind donations. It connects donors with charities that publish needs and campaigns, and lets donors follow a donation's status.
+AOUN is a Flutter application for coordinating in-kind donations between donors and charities. The repository also contains a Firebase setup and a web administration scaffold.
 
-## MVP scope
+## Project structure
 
-- Donor and charity sign-in, with role-specific destinations.
-- Browse campaigns and categories, with basic search and filtering.
-- Create donations and view their status in the Donations area.
-- Charities create campaigns and manage incoming donations.
-- Firebase Authentication and Cloud Firestore; Firebase Storage when campaign or charity images are added.
-- A simple admin website remains a separate project priority after the mobile app.
+- `mobile_app/` — Flutter application and feature folders.
+- `web_admin/` — web administration entry point and shared assets.
+- `firebase.json`, `firestore.rules`, `firestore.indexes.json`, and `storage.rules` — Firebase CLI configuration and security policies.
 
-Reviews, payment processing, maps, advanced analytics, push notifications, and Cloud Functions are outside the first release.
+## Technologies
 
-## Mobile stack
+Flutter/Dart, Firebase Core, Firebase Authentication, Cloud Firestore, Firebase Storage, and Cubit (`flutter_bloc`).
 
-- Flutter and Dart
-- Firebase Authentication, Cloud Firestore, and optional Firebase Storage
-- Cubit (`flutter_bloc`) for feature state
-- Clean Architecture organized as Data, Domain, and Presentation
-- Flutter Navigator for routing; dependencies are passed through constructors
+## Run the mobile app
 
-## Project layout
+Install Flutter, open a terminal in `mobile_app/`, and run:
 
-`lib/features` contains Authentication, Home, Campaigns, Donations, and Charity. Categories live with Home; donation tracking lives with Donations. Profile is a simple account screen when implemented.
+```sh
+flutter pub get
+flutter run
+```
 
-## Setup status
+`mobile_app/lib/main.dart` initializes Firebase from `mobile_app/lib/firebase_options.dart` and starts the app defined in `mobile_app/lib/app.dart`. Android and iOS runner projects and Firebase native configuration are included for local builds.
 
-The current workspace contains the mobile scaffold and architecture folders. Add the platform folders and Firebase configuration for the target platform before using Firebase. Add actual image and font files before declaring them as assets in `pubspec.yaml`.
+## Team integration
+
+The team leader owns startup, theme and route wiring, shared widgets, README, and project integration. The feature files are scaffolds for their assigned owners; their screens and behavior are not implemented here. Route builders remain placeholders until those pages are ready.
+
+## Firebase security
+
+Firestore and Storage rules deny client access until the team agrees on collection permissions. Review the rules before deployment or before connecting feature reads and writes.
